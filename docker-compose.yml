@@ -1,0 +1,36 @@
+# Projeto Integrador Extensionista
+# Erasmo Cardoso da Silva 
+
+#Docker compose
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: php-projintegrador
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+    
+  
+# Banco Mysql
+  db:
+    image: mysql:8.0
+    container_name: mysql-projintegrador
+    environment:
+      MYSQL_ROOT_PASSWORD: ""           
+      MYSQL_DATABASE: projintegrador         
+      MYSQL_USER: erasmo                  
+      MYSQL_PASSWORD: ""                
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+   
+
+volumes:
+  db_data:
