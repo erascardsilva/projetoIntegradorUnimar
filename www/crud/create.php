@@ -1,3 +1,4 @@
+
 <?php
     require("connect.php");
 
@@ -24,4 +25,4 @@
 
     // Fechar a conexão 
     mysqli_close($dbconn);
-?>
+
