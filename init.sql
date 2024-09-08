@@ -6,7 +6,7 @@ USE projintegrador;
 
 CREATE TABLE IF NOT EXISTS suggestions (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     whatsapp VARCHAR(20),
     suggestion_type ENUM('Sugestão', 'Crítica') NOT NULL,

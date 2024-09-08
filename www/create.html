@@ -1,6 +1,4 @@
-<!-- Projeto Integrador Extensionista
-Erasmo Cardoso da Silva -->
-
+<!-- Projeto Integrador Extensionista -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -18,18 +16,17 @@ Erasmo Cardoso da Silva -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div
-      class="container d-flex justify-content-center align-items-center min-vh-100"
-    >
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
       <div class="card p-4 shadow-sm" style="max-width: 600px; width: 100%">
         <h2 class="text-center mb-4">Deixe sua mensagem</h2>
-        <form action="submit.php" method="post">
+        
+        <form action="./crud/create.php" method="post">
           <div class="mb-3">
-            <label for="name" class="form-label">Nome:</label>
+            <label for="nome" class="form-label">Nome:</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="nome"
+              name="nome" 
               class="form-control"
               required
             />
@@ -39,7 +36,7 @@ Erasmo Cardoso da Silva -->
             <input
               type="email"
               id="email"
-              name="email"
+              name="email" 
               class="form-control"
               required
             />
@@ -49,7 +46,7 @@ Erasmo Cardoso da Silva -->
             <input
               type="text"
               id="whatsapp"
-              name="whatsapp"
+              name="whatsapp" 
               class="form-control"
             />
           </div>
@@ -66,10 +63,10 @@ Erasmo Cardoso da Silva -->
             </select>
           </div>
           <div class="mb-3">
-            <label for="suggestion" class="form-label">Sugestão/Crítica:</label>
+            <label for="suggestion" class="form-label">Mensagem:</label>
             <textarea
               id="suggestion"
-              name="suggestion"
+              name="suggestion" 
               class="form-control"
               rows="4"
               required

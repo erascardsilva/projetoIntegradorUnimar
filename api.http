@@ -1,0 +1,18 @@
+### Criar 
+POST http://localhost:8080/crud/create.php
+Content-Type: application/x-www-form-urlencoded
+
+nome=Erasmo%20Cardoso&email=erasmo@example.com&whatsapp=%2B55%2011%2099999-9999&suggestion_type=Sugestão&suggestion=Minha%20sugestão%20de%20melhoria!
+
+### Listar 
+GET http://localhost:8080/api/suggestions
+
+
+### Atualizar 
+PUT http://localhost:8080/api/suggestions/1
+Content-Type: application/x-www-form-urlencoded
+
+nome=Erasmo%20Cardoso%20Atualizado&email=erasmo_novo@example.com&whatsapp=%2B55%2011%2088888-8888&suggestion_type=Crítica&suggestion=Atualizando%20minha%20sugestão!
+
+### Deletar 
+DELETE http://localhost:8080/api/suggestions/1
