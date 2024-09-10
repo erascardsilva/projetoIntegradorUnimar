@@ -1,4 +1,4 @@
-// usando REST api.http para teste do crud
+//Teste CRUD usando REST api.http para teste do crud
 
 ### Criar 
 POST http://localhost:8080/crud/create.php
@@ -7,14 +7,23 @@ Content-Type: application/x-www-form-urlencoded
 nome=Erasmo%20Cardoso&email=erasmo@example.com&whatsapp=%2B55%2011%2099999-9999&suggestion_type=Sugestao&suggestion=Minha%20sugestão%20de%20melhoria!
 
 ### Listar 
-GET http://localhost:8080/api/suggestions
+GET http://localhost:8080/crud/read.php
+
+### Lista por ID
+POST http://localhost:8080/crud/readId.php
+Content-Type: application/x-www-form-urlencoded
+
+id=6
+
+###
+
+### Deletar 
+DELETE http://localhost:8080/crud/delete.php?id=5
 
 
 ### Atualizar 
-PUT http://localhost:8080/api/suggestions/1
+PUT http://localhost:8080/crud/update.php
 Content-Type: application/x-www-form-urlencoded
 
-nome=Erasmo%20Cardoso%20Atualizado&email=erasmo_novo@example.com&whatsapp=%2B55%2011%2088888-8888&suggestion_type=Crítica&suggestion=Atualizando%20minha%20sugestão!
+id=7&nome=Nome%20Atualizado&email=novoemail@example.com&whatsapp=%2B55%2011%2098888-8888&suggestion_type=Critica&suggestion=Atualizacao%20da%20sugestao
 
-### Deletar 
-DELETE http://localhost:8080/api/suggestions/1

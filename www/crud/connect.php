@@ -1,9 +1,10 @@
+<!-- Projeto Integrador --- Erasmo Cardoso -->
 <?php
 // Decidi criar uma função para conectar com o banco de dados
 function connect() {
     $servername = "db";
     $database = "projintegrador";
-    $username = "root";
+    $username = "erasmo";
     $password = "3727";
 
     $maxConnect = 5; //tentativas de conectar com mysql
@@ -13,11 +14,11 @@ function connect() {
     $dbconn = false;
 
     while ($replayConnect < $maxConnect) {
-        //  criar a conexão
+        //  crio a conexão
         $dbconn = mysqli_connect($servername, $username, $password, $database);
 
         if ($dbconn) {
-            // Se a conectar, sai do loop
+            // Se nao conectar, sai do loop
             return $dbconn;
         } else {
             // Se a conexão falhar, incrementa e tentar novamente

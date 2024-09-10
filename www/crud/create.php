@@ -1,6 +1,9 @@
-
+<!-- Projeto Integrador --- Erasmo Cardoso -->
 <?php
     require("connect.php");
+// função CREATE
+function create(){
+    global $dbconn;
 
     if (!$dbconn) {
         die("Conexão falhou. Erro: " . mysqli_connect_error());
@@ -26,3 +29,6 @@
     // Fechar a conexão 
     mysqli_close($dbconn);
 
+}
+
+create();
