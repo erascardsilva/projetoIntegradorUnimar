@@ -1,9 +1,8 @@
-<!-- Projeto Integrador --- Erasmo Cardoso -->
-
 <?php
-
+// Conexão com o banco de dados
 require("connect.php");
-// função READ
+
+// Função READ que será usada no frontend
 function read()
 {
     global $dbconn;
@@ -12,12 +11,11 @@ function read()
     };
 
     $sql = "SELECT * FROM suggestions";
-
     $dados = mysqli_query($dbconn, $sql);
 
     $suggestions = [];
 
-    // incrementa o array
+    // Incrementa o array com os resultados
     if (mysqli_num_rows($dados) > 0) {
         while ($row = mysqli_fetch_assoc($dados)) {
             $suggestions[] = $row;
@@ -25,8 +23,6 @@ function read()
     }
 
     mysqli_close($dbconn);
-    echo json_encode($suggestions);
+    return $suggestions;  // Retorna o array de sugestões
 }
 
-// execulta read
-read();

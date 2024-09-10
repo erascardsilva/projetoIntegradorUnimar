@@ -4,14 +4,15 @@
 
 require('./crud/connect.php');
 
-function updateID($id) {
+function updateID($id)
+{
     global $dbconn;
 
     if (!$dbconn) {
         die("Conexão falhou. Erro: " . mysqli_connect_error());
     }
 
-    $id = intval($id); 
+    $id = intval($id);
     $sql = "SELECT * FROM suggestions WHERE id = $id";
     $result = mysqli_query($dbconn, $sql);
 
@@ -27,7 +28,7 @@ function updateID($id) {
     return $suggestion;
 }
 
-// Atualiza 
+// Atualiza os dados selecionados
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
     $id = intval($_POST['id']);
     $nome = mysqli_real_escape_string($dbconn, $_POST['nome']);
@@ -52,6 +53,7 @@ $suggestion = updateID($id);
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,6 +63,7 @@ $suggestion = updateID($id);
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card p-4 shadow-sm" style="max-width: 600px; width: 100%">
@@ -72,33 +75,30 @@ $suggestion = updateID($id);
                     <input
                         type="text"
                         id="nome"
-                        name="nome" 
+                        name="nome"
                         class="form-control"
                         value="<?php echo htmlspecialchars($suggestion['nome']); ?>"
-                        required
-                    />
+                        required />
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email:</label>
                     <input
                         type="email"
                         id="email"
-                        name="email" 
+                        name="email"
                         class="form-control"
                         value="<?php echo htmlspecialchars($suggestion['email']); ?>"
-                        required
-                    />
+                        required />
                 </div>
                 <div class="mb-3">
                     <label for="whatsapp" class="form-label">WhatsApp:</label>
                     <input
                         type="text"
                         id="whatsapp"
-                        name="whatsapp" 
+                        name="whatsapp"
                         class="form-control"
                         value="<?php echo htmlspecialchars($suggestion['whatsapp']); ?>"
-                        required
-                    />
+                        required />
                 </div>
                 <div class="mb-3">
                     <label for="suggestion_type" class="form-label">Tipo:</label>
@@ -106,8 +106,7 @@ $suggestion = updateID($id);
                         id="suggestion_type"
                         name="suggestion_type"
                         class="form-select"
-                        required
-                    >
+                        required>
                         <option value="Sugestao" <?php echo $suggestion['suggestion_type'] === 'Sugestao' ? 'selected' : ''; ?>>Sugestão</option>
                         <option value="Critica" <?php echo $suggestion['suggestion_type'] === 'Critica' ? 'selected' : ''; ?>>Crítica</option>
                     </select>
@@ -116,11 +115,10 @@ $suggestion = updateID($id);
                     <label for="suggestion" class="form-label">Mensagem:</label>
                     <textarea
                         id="suggestion"
-                        name="suggestion" 
+                        name="suggestion"
                         class="form-control"
                         rows="4"
-                        required
-                    ><?php echo htmlspecialchars($suggestion['suggestion']); ?></textarea>
+                        required><?php echo htmlspecialchars($suggestion['suggestion']); ?></textarea>
                 </div>
                 <div class="d-flex gap-2">
                     <button type="submit" class="btn btn-primary">Salvar</button>
@@ -130,4 +128,5 @@ $suggestion = updateID($id);
         </div>
     </div>
 </body>
+
 </html>

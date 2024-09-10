@@ -1,5 +1,8 @@
 # Projeto Integrador - Erasmo Cardoso
 # docker compose
+# cria conteiners 1 php-projintegrador (onde fica conteudo www) 
+# 2 mysql-projintegrador (container com MYSQL) 
+# 3 db (rede que conecta os containers)
 
 version: '3.8'
 
@@ -7,7 +10,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile-php
+      dockerfile: ./www/Dockerfile
     container_name: php-projintegrador
     ports:
       - "8080:80"
@@ -21,7 +24,7 @@ services:
   db:
     build:
       context: .
-      dockerfile: Dockerfile-mysql
+      dockerfile: ./banco/Dockerfile
     container_name: mysql-projintegrador
     environment:
       MYSQL_ROOT_PASSWORD: "3727"
