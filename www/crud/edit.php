@@ -3,7 +3,6 @@
 <?php
 require("connect.php");
 
-// Função UPDATE
 function update()
 {
     global $dbconn;
@@ -52,10 +51,8 @@ function update()
         echo json_encode(["status" => "error", "message" => "Erro ao atualizar: " . mysqli_stmt_error($stmt)]);
     }
 
-    // Fecha a declaração e a conexão
     mysqli_stmt_close($stmt);
     mysqli_close($dbconn);
 }
 
-// Chama a função 
 update();

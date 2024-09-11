@@ -31,7 +31,7 @@ if (isset($_GET['id'])) {
 
     mysqli_close($dbconn);
 
-    
+
     exit;
 } else {
     echo "ID não especificado.";

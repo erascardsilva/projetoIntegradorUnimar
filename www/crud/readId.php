@@ -4,7 +4,6 @@
 
 require("connect.php");
 
-// Função readId
 function readId()
 {
     global $dbconn;

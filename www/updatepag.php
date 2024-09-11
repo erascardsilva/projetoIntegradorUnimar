@@ -1,55 +1,17 @@
 <!-- Projeto Integrador - Erasmo Cardoso -->
 
 <?php
+require('./crud/updateId.php');
 
-require('./crud/connect.php');
+$id = isset($_GET['id']) ? $_GET['id'] : null;
 
-function updateID($id)
-{
-    global $dbconn;
-
-    if (!$dbconn) {
-        die("Conexão falhou. Erro: " . mysqli_connect_error());
-    }
-
-    $id = intval($id);
-    $sql = "SELECT * FROM suggestions WHERE id = $id";
-    $result = mysqli_query($dbconn, $sql);
-
-    if (!$result) {
-        die("Erro na consulta: " . mysqli_error($dbconn));
-    }
-
-    $suggestion = mysqli_fetch_assoc($result);
-
-    mysqli_free_result($result);
-    mysqli_close($dbconn);
-
-    return $suggestion;
+if ($id === null) {
+    die("ID não fornecido.");
 }
 
-// Atualiza os dados selecionados
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
-    $id = intval($_POST['id']);
-    $nome = mysqli_real_escape_string($dbconn, $_POST['nome']);
-    $email = mysqli_real_escape_string($dbconn, $_POST['email']);
-    $whatsapp = mysqli_real_escape_string($dbconn, $_POST['whatsapp']);
-    $suggestion_type = mysqli_real_escape_string($dbconn, $_POST['suggestion_type']);
-    $suggestion = mysqli_real_escape_string($dbconn, $_POST['suggestion']);
-
-    $sql = "UPDATE suggestions SET nome = '$nome', email = '$email', whatsapp = '$whatsapp', suggestion_type = '$suggestion_type', suggestion = '$suggestion' WHERE id = $id";
-    if (mysqli_query($dbconn, $sql)) {
-        echo "<script>alert('Sugestão atualizada com sucesso.'); window.location.href = 'reader.php';</script>";
-    } else {
-        echo "Erro ao atualizar a sugestão: " . mysqli_error($dbconn);
-    }
-    exit;
-}
-
-// Pega o ID 
-$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 $suggestion = updateID($id);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

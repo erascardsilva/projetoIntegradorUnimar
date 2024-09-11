@@ -17,7 +17,7 @@ RUN apt-get update && \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd
 
-# Copia os arquivos do projeto para o diretório web
+# Copia os arquivos para diretório web
 COPY www/ /var/www/html/
 
 # Configurar permissões para o Apache

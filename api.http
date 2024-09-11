@@ -1,29 +1,28 @@
-//Teste CRUD usando REST api.http para teste do crud
-
-### Criar 
+### Criar uma sugestão
 POST http://localhost:8080/crud/create.php
 Content-Type: application/x-www-form-urlencoded
 
-nome=Erasmo%20Cardoso&email=erasmo@example.com&whatsapp=%2B55%2011%2099999-9999&suggestion_type=Sugestao&suggestion=Minha%20sugestão%20de%20melhoria!
+nome=Erasmo%20Cardoso&email=erasmo@example.com&whatsapp=%2B55%2011%2099999-9999&suggestion_type=Sugestao&suggestion=Minha%20sugestao%20de%20melhoria!
 
-### Listar 
+### Requisição para obter todas as sugestões
 GET http://localhost:8080/crud/read.php
+Content-Type: application/x-www-form-urlencoded
 
-### Lista por ID
+
+
+
+### Obter sugestão por ID
 POST http://localhost:8080/crud/readId.php
 Content-Type: application/x-www-form-urlencoded
 
-id=6
+id=10
 
-###
-
-### Deletar 
+### Deletar sugestão por ID
 DELETE http://localhost:8080/crud/delete.php?id=5
+Accept: application/json
 
-
-### Atualizar 
-PUT http://localhost:8080/crud/update.php
+### Atualizar sugestão
+PUT http://localhost:8080/crud/edit.php
 Content-Type: application/x-www-form-urlencoded
 
-id=7&nome=Nome%20Atualizado&email=novoemail@example.com&whatsapp=%2B55%2011%2098888-8888&suggestion_type=Critica&suggestion=Atualizacao%20da%20sugestao
-
+id=10&nome=Nome%20Atualizado&email=novoemail@example.com&whatsapp=%2B55%2011%2098888-8888&suggestion_type=Critica&suggestion=Atualizacao%20da%20sugestao

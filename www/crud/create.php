@@ -1,15 +1,15 @@
 <!-- Projeto Integrador --- Erasmo Cardoso -->
 <?php
-    require("connect.php");
-// função CREATE
-function create(){
+require("connect.php");
+function create()
+{
     global $dbconn;
 
     if (!$dbconn) {
         die("Conexão falhou. Erro: " . mysqli_connect_error());
     }
 
-    
+
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $whatsapp = $_POST['whatsapp'];
@@ -28,7 +28,6 @@ function create(){
 
     // Fechar a conexão 
     mysqli_close($dbconn);
-
 }
 
 create();

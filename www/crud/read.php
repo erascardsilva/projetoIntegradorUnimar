@@ -1,8 +1,10 @@
+<!-- Projeto Integrador --- Erasmo Cardoso -->
+
+
 <?php
-// Conexão com o banco de dados
+
 require("connect.php");
 
-// Função READ que será usada no frontend
 function read()
 {
     global $dbconn;
@@ -23,6 +25,5 @@ function read()
     }
 
     mysqli_close($dbconn);
-    return $suggestions;  // Retorna o array de sugestões
+    return $suggestions;  // Retorna o array 
 }
-
