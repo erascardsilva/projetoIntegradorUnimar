@@ -110,8 +110,8 @@ CREATE TABLE IF NOT EXISTS suggestions (
 );
 ```
 
-##### Telas do aplicativo
+# Telas do aplicativo
 
-- # Tela Inicial
+- ### Tela Inicial
 <img width = "1000px" src="https://github.com/user-attachments/assets/971562f7-efb7-47db-a388-a66551ff470a" >
 
