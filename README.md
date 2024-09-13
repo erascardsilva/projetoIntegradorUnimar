@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIMAR , sob a orientação do Prof. Douglas Rodrigues. O sistema permite que os usuários enviem críticas e sugestões. Os usuários podem inserir seu nome, WhatsApp e o texto da sugestão ou crítica. O sistema oferece funcionalidades de criação, edição, exclusão e visualização dos registros, assim fazendo todo o CRUD.
+Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIMAR , sob a orientação do Prof. Douglas Rodrigues. O sistema permite que os usuários enviem críticas e sugestões. Os usuários podem inserir seu nome, WhatsApp, email e o texto da sugestão ou crítica. O sistema oferece funcionalidades de criação, edição, exclusão e visualização dos registros, assim fazendo todo o CRUD.
 
 ## Tecnologias Utilizadas
 
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS suggestions (
 
 <img width = "1000px" src="https://github.com/user-attachments/assets/971562f7-efb7-47db-a388-a66551ff470a" >
 
-- ### Tela incluir dados (nome,  whats, tipo de mensagem, mensagem) () CREATE
+- ### Tela incluir dados (nome,  whats, email, tipo de mensagem, mensagem) () CREATE
 
 <img width = "1000px" src="https://github.com/user-attachments/assets/0792b927-2699-4720-87b0-14f1ede53e67">
 
