@@ -28,3 +28,15 @@ body {
     margin-top: 20px; 
     margin-bottom: 20px; 
 }
+
+.success {
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}

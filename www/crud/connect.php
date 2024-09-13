@@ -13,17 +13,13 @@ $dotenv->load();
 
 // Decidi criar uma função para conectar com o banco de dados
 function connect(){
-    //Uso no Docker
+    //dados 
     $servername = $_ENV['DB_HOST'];
     $database = $_ENV['DB_DATABASE'];
     $username = $_ENV['DB_USERNAME'];
     $password = $_ENV['DB_PASSWORD'];
     
-    //uso no Xampp
-    // $servername = "localhost";
-    // $database =  "projintegrador";
-    // $username = "root";
-    // $password = "";
+    
 
     $maxConnect = 5; //tentativas de conectar com mysql
     $retryDelay = 2; 
@@ -53,7 +49,25 @@ function connect(){
 // função de conexão
 $dbconn = connect();
 
+// Tabela "suggestions" se nao existir sera criada "CREATE TABLE IF NOT EXISTS"
+$query = "CREATE TABLE IF NOT EXISTS suggestions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    whatsapp VARCHAR(20),
+    suggestion_type ENUM('Sugestao', 'Critica') NOT NULL,
+    suggestion TEXT NOT NULL,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
 
+if (mysqli_query($dbconn, $query)) {
+    echo "<p class='success'>Conectado.</p>";
+} else {
+    echo "<p class='error'>Erro ao criar tabela: " . mysqli_error($dbconn) . "</p>";
+}
+
+// mysqli_close($dbconn);
+// ?>
 
 
 
