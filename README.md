@@ -116,7 +116,22 @@ CREATE TABLE IF NOT EXISTS suggestions (
 
 <img width = "1000px" src="https://github.com/user-attachments/assets/971562f7-efb7-47db-a388-a66551ff470a" >
 
-- ### Tela incluir dados (nome,  whats, tipo de mensagem, mensagem) 
+- ### Tela incluir dados (nome,  whats, tipo de mensagem, mensagem) () CREATE
 
 <img width = "1000px" src="https://github.com/user-attachments/assets/0792b927-2699-4720-87b0-14f1ede53e67">
+
+- ### Tela de visualização (READ) com botoes em cada item para apagar e editar os dados salvos
+
+<img width = "1000px" src="https://github.com/user-attachments/assets/45061e2d-8fc9-4175-bc0a-20f751308f78">
+
+- ### Tela de edição de dados (UPDATE)
+
+<img width = "1000px" src="https://github.com/user-attachments/assets/447acfeb-1f62-47d9-a411-1fce6ed02a18">
+
+- ### Apagando dados selecionados (DELETE) mesma tela de visualização com o botao APAGAR
+
+<img width = "1000px" src="https://github.com/user-attachments/assets/e2115a67-9a84-4482-90b6-2066cbbcc970">
+
+
+ 
 
