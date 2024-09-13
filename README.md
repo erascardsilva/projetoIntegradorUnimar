@@ -53,7 +53,7 @@ Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIM
 
 ### Arquivo `.env`
 
-O arquivo `.env` contém variáveis de ambiente para a configuração do banco de dados. Você precisará ajustar este arquivo para que ele funcione com o seu ambiente, seja no XAMPP ou Docker.
+O arquivo `.env` (encontra-se na pasta www) contém variáveis de ambiente para a configuração do banco de dados. Você precisará ajustar este arquivo para que ele funcione com o seu ambiente, seja no XAMPP ou Docker.
 
 - Exemplo de configuração para XAMPP:
 
