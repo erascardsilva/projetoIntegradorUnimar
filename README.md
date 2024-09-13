@@ -6,9 +6,9 @@ Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIM
 
 ## Tecnologias Utilizadas
 
-- **PHP** - Versão 8.1 - (requisito)
-- **HTML** - (requisito)
-- **CSS**  - (requisito)
+- **PHP** - Versão 8.1 -   (requisito)
+- **HTML** -               (requisito)
+- **CSS**  -               (requisito)
 - **Bootstrap**
 - **MySQL** - Versão 8.0 - (requisito) 
 - **Docker**
@@ -72,6 +72,7 @@ O arquivo `.env` contém variáveis de ambiente para a configuração do banco d
     DB_PASS=3727
     DB_NAME=projintegrador
     ```
+   O projeto ficara como padrao para testes em Xampp .
 
 ### Criação do Banco de Dados
 
