@@ -1,11 +1,29 @@
 <!-- Projeto Integrador --- Erasmo Cardoso -->
 <?php
+
+/*Decidi usar um arquivo .env, porque como montei o projeto em docker e
+foi passado para ser usado em Xampp criei o .env que mantem as duas configuraçôes
+biblioteca utilizada (vlucas/phpdotenv) instalada via composer
+*/
+require_once __DIR__ . './../vendor/autoload.php'; // Caminho correto para autoload.php
+
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . './../'); // Caminho para .env
+$dotenv->load();
+
 // Decidi criar uma função para conectar com o banco de dados
-function connect() {
-    $servername = "db";
-    $database = "projintegrador";
-    $username = "erasmo";
-    $password = "3727";
+function connect(){
+    //Uso no Docker
+    $servername = $_ENV['DB_HOST'];
+    $database = $_ENV['DB_DATABASE'];
+    $username = $_ENV['DB_USERNAME'];
+    $password = $_ENV['DB_PASSWORD'];
+    
+    //uso no Xampp
+    // $servername = "localhost";
+    // $database =  "projintegrador";
+    // $username = "root";
+    // $password = "";
 
     $maxConnect = 5; //tentativas de conectar com mysql
     $retryDelay = 2; 
