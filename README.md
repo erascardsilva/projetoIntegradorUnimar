@@ -76,13 +76,15 @@ O arquivo `.env` contém variáveis de ambiente para a configuração do banco d
 
 Na pasta `banco`, há um arquivo chamado `init.sql` que contém o script para criar a tabela necessária para este projeto. Você pode importar este arquivo diretamente no MySQL para configurar o banco de dados automaticamente.
 
+Detalhe o projeto já cria a database e as tabelas automaticamente só utilize se tiver algum problema
+
 #### Estrutura da Tabela
 
 O script `init.sql` criará a tabela `suggestions` com a seguinte estrutura:
 na execulção do app se a tabela nao existir sera criada e mandara mensagem de conectado na tela de listagem e edição
 dos dados..
 
-Detalhe o projeto já cria a database e as tabelas automaticamente só utilize se tiver algum problema
+
 
 cria database e seleciona..
 ```sql
