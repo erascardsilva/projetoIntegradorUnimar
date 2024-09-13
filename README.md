@@ -12,6 +12,7 @@ Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIM
 - **Bootstrap**
 - **MySQL** - Versão 8.0 - (requisito) 
 - **Docker**
+- **Docker Compose**
 
 ## Ferramentas e Como Usar
 
