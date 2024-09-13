@@ -92,5 +92,6 @@ CREATE TABLE IF NOT EXISTS suggestions (
     suggestion TEXT NOT NULL,
     submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
 ### Telas do aplicativo
