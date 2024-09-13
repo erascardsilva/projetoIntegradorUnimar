@@ -6,11 +6,11 @@ Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIM
 
 ## Tecnologias Utilizadas
 
-- **PHP** - Versão 8.1
-- **HTML**
-- **CSS**
+- **PHP** - Versão 8.1 - (requisito)
+- **HTML** - (requisito)
+- **CSS**  - (requisito)
 - **Bootstrap**
-- **MySQL** - Versão 8.0
+- **MySQL** - Versão 8.0 - (requisito) 
 - **Docker**
 
 ## Ferramentas e Como Usar
