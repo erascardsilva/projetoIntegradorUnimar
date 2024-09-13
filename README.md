@@ -82,6 +82,16 @@ O script `init.sql` criará a tabela `suggestions` com a seguinte estrutura:
 na execulção do app se a tabela nao existir sera criada e mandara mensagem de conectado na tela de listagem e edição
 dos dados
 
+cria database e seleciona..
+```sql
+
+CREATE DATABASE IF NOT EXISTS projintegrador;
+
+USE projintegrador;
+
+```
+cria tabelas se não existir
+
 ```sql
 CREATE TABLE IF NOT EXISTS suggestions (
     id INT AUTO_INCREMENT PRIMARY KEY,
