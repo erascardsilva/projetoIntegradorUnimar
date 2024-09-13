@@ -125,6 +125,8 @@ CREATE TABLE IF NOT EXISTS suggestions (
 <img width = "1000px" src="https://github.com/user-attachments/assets/45061e2d-8fc9-4175-bc0a-20f751308f78">
 
 - ### Tela de edição de dados (UPDATE)
+  
+<img width = "1000px" src="https://github.com/user-attachments/assets/4bd715a4-2b4a-40dd-ad0f-2e2baa5decd6">
 
 <img width = "1000px" src="https://github.com/user-attachments/assets/447acfeb-1f62-47d9-a411-1fce6ed02a18">
 
