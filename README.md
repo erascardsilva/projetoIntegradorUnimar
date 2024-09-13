@@ -113,5 +113,10 @@ CREATE TABLE IF NOT EXISTS suggestions (
 # Telas do aplicativo
 
 - ### Tela Inicial
+
 <img width = "1000px" src="https://github.com/user-attachments/assets/971562f7-efb7-47db-a388-a66551ff470a" >
+
+- ### Tela incluir dados (nome,  whats, tipo de mensagem, mensagem) 
+
+<img width = "1000px" src="https://github.com/user-attachments/assets/0792b927-2699-4720-87b0-14f1ede53e67">
 
