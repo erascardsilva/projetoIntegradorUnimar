@@ -110,4 +110,4 @@ CREATE TABLE IF NOT EXISTS suggestions (
 );
 ```
 
-### Telas do aplicativo
+##### Telas do aplicativo
