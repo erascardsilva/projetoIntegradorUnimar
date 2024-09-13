@@ -2,13 +2,16 @@
 
 ## Descrição do Projeto
 
-Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIMAR, sob a orientação do Prof. Douglas Rodrigues. O sistema permite que os usuários enviem críticas e sugestões. Os usuários podem inserir seu nome, WhatsApp e o texto da sugestão ou crítica. O sistema oferece funcionalidades de criação, edição, exclusão e visualização dos registros, atendendo aos requisitos propostos pelo professor.
+Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIMAR , sob a orientação do Prof. Douglas Rodrigues. O sistema permite que os usuários enviem críticas e sugestões. Os usuários podem inserir seu nome, WhatsApp e o texto da sugestão ou crítica. O sistema oferece funcionalidades de criação, edição, exclusão e visualização dos registros, assim fazendo todo o CRUD.
 
 ## Tecnologias Utilizadas
 
 - **PHP** - Versão 8.1
+- **HTML**
 - **CSS**
+- **Bootstrap**
 - **MySQL** - Versão 8.0
+- **Docker**
 
 ## Ferramentas e Como Usar
 
@@ -42,9 +45,8 @@ Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIM
 ## Estrutura das Pastas do Projeto
 
 - **`www/`** - Contém o código fonte do projeto. É importante notar que a maior parte do código e arquivos relacionados está dentro desta pasta.
-  - **`www/reader.php`** - Arquivo principal do aplicativo.
-  - **`www/`** - Outros arquivos e diretórios do projeto.
-- **`banco/`** - Contém o arquivo `init.sql` para criação do banco de dados.
+- **`www/`** - Outros arquivos e diretórios do projeto.
+- **`banco/`** - Contém o arquivo `init.sql` ou `criarbanco.sql` para criação do banco de dados.
 
 ## Configuração do Banco de Dados
 
@@ -90,3 +92,5 @@ CREATE TABLE IF NOT EXISTS suggestions (
     suggestion TEXT NOT NULL,
     submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+### Telas do aplicativo
