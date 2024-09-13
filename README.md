@@ -81,6 +81,7 @@ Na pasta `banco`, há um arquivo chamado `init.sql` que contém o script para cr
 O script `init.sql` criará a tabela `suggestions` com a seguinte estrutura:
 na execulção do app se a tabela nao existir sera criada e mandara mensagem de conectado na tela de listagem e edição
 dos dados
+Detalhe o projeto já cria a database e as tabelas automaticamente só utilize se tiver algum problema
 
 cria database e seleciona..
 ```sql
