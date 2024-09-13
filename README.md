@@ -45,15 +45,16 @@ Este é um aplicativo desenvolvido para a matéria de Projeto Integrador da UNIM
 
 ## Estrutura das Pastas do Projeto
 
-- **`www/`** - Contém o código fonte do projeto. É importante notar que a maior parte do código e arquivos relacionados está dentro desta pasta.
+- **`www/`** - Contém o código fonte do projeto e o dockerfile referente ao PHP. É importante notar que a maior parte do código e arquivos relacionados está dentro desta pasta.
 - **`www/`** - Outros arquivos e diretórios do projeto.
-- **`banco/`** - Contém o arquivo `init.sql` ou `criarbanco.sql` para criação do banco de dados.
+- **`banco/`** - Contém o arquivo `init.sql` ou `criarbanco.sql` para criação do banco de dados e o dockerfile 
+referente ao container MYSQL.
 
 ## Configuração do Banco de Dados
 
 ### Arquivo `.env`
 
-O arquivo `.env` (encontra-se na pasta www) contém variáveis de ambiente para a configuração do banco de dados. Você precisará ajustar este arquivo para que ele funcione com o seu ambiente, seja no XAMPP ou Docker.
+O arquivo `.env` (encontra-se na pasta www) contém variáveis de ambiente para a configuração do banco de dados. Você precisará ajustar este arquivo para que ele funcione com o seu ambiente, seja no XAMPP ou Docker.Esta como padrao para Xampp, se for utilizar em docker favor verificar.
 
 - Exemplo de configuração para XAMPP:
 
@@ -82,11 +83,10 @@ Detalhe o projeto já cria a database e as tabelas automaticamente só utilize s
 
 #### Estrutura da Tabela
 
-O script `init.sql` criará a tabela `suggestions` com a seguinte estrutura:
-na execulção do app se a tabela nao existir sera criada e mandara mensagem de conectado na tela de listagem e edição
+Na execução do app se a tabela nao existir sera criada e mandara mensagem de conectado na tela de listagem e edição
 dos dados..
 
-
+O script `init.sql` criará a tabela `suggestions` com a seguinte estrutura:
 
 cria database e seleciona..
 ```sql
