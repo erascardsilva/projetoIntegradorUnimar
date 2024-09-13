@@ -88,7 +88,7 @@ dos dados..
 
 O script `init.sql` criará a tabela `suggestions` com a seguinte estrutura:
 
-cria database e seleciona..
+cria database se não existir e seleciona..
 ```sql
 
 CREATE DATABASE IF NOT EXISTS projintegrador;
