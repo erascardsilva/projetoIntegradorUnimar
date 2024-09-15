@@ -73,6 +73,8 @@ O arquivo `.env` (encontra-se na pasta www) contém variáveis de ambiente para 
     DB_PASS=3727
     DB_NAME=projintegrador
     ```
+   
+   Para a utilização e manipulação do arquivo .env no projeto, foi necessario a utilização da biblioteca ` vlucas/phpdotenv:^5.6` , foi utilizado composer e com isto ela faz parte agora do projeto como requisito.
    O projeto ficara como padrao para testes em Xampp .
 
 ### Criação do Banco de Dados
